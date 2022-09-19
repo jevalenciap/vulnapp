@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function dynvar() {
+var vars = {};
+var x = document.location.search.substring(1).split('&');
+for (var i in x) {
+var z = x[i].split('=',2);
+if (!vars[z[0]]) {
+vars[z[0]] = unescape(z[1]);
+}
+}
+document.getElementById('doctitle').innerHTML = vars.doctitle;
+document.getElementById('paginate').innerHTML = 'page ' + vars.page + ' of ' + vars.topage;
+}
+</script>
+<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
+</head>
+<body style="margin:0;" onload="dynvar();">
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;    
+}
+</style>
+
+<body>
+
+<img src="HEADER.PNG" alt="" width="773" height="60" align="left" >
+<p>&nbsp;</p>
+
+</body>
+</html>
