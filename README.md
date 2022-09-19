@@ -1,2 +1,2 @@
 # VulnApp
-Vulnerability analysis on Networking devices - configuaration files
+Vulnerability analysis on configuration files of Networking devices (Cisco devices supported)
